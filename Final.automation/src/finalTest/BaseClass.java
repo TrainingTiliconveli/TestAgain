@@ -15,7 +15,7 @@ public class BaseClass {
 
 	WebDriver driver;
 	Logger log = Logger.getLogger("vvv");
-
+String workingdr=System.getProperty("user.dir");
 	/*
 	 * public Baseclass(WebDriver driver) throws Exception { this.driver = driver;
 	 * 
@@ -25,7 +25,8 @@ public class BaseClass {
 	void browserOpen() throws InterruptedException {
 
 		// BasicConfigurator.configure();
-		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver",workingdr+ "\\resources\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -33,7 +34,7 @@ public class BaseClass {
 	}
 
 	void logIn() throws Exception {
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Base.properties");
+		File file = new File(workingdr+"\\resources\\Base.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -69,7 +70,7 @@ public class BaseClass {
 		driver.switchTo().defaultContent();
 
 		Thread.sleep(10000);
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Base.properties");
+		File file = new File(workingdr+"\\resources\\Base.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();

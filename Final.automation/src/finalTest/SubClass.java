@@ -24,8 +24,7 @@ public class SubClass extends BaseClass {
 		 * @author karthiga balapriya work name : upload
 		 */
 		Properties prop;
-		FileInputStream fileInput = new FileInputStream(
-				"E:\\workspace\\Final.automation\\src\\finalTest\\Upload.properties");
+		FileInputStream fileInput = new FileInputStream(workingdr + "\\resources\\Upload.properties");
 		prop = new Properties();
 		prop.load(fileInput);
 		driver.switchTo().defaultContent();
@@ -40,7 +39,7 @@ public class SubClass extends BaseClass {
 		driver.switchTo().frame("replacedoccontentframe");
 		Thread.sleep(1000);
 		driver.findElement(By.id("resumeupload")).clear();
-		driver.findElement(By.id("resumeupload")).sendKeys(prop.getProperty("path"));
+		driver.findElement(By.id("resumeupload")).sendKeys(workingdr + "\\resources\\resume.docx");
 		log.debug("Uploading Resume");
 
 		Thread.sleep(10000);
@@ -54,6 +53,7 @@ public class SubClass extends BaseClass {
 		log.debug("Clicking Close button");
 
 	}
+
 	public void forward() throws Exception {
 
 		// Displaying profile detail and downloading the resume
@@ -61,7 +61,7 @@ public class SubClass extends BaseClass {
 		 * @author Arun Sakthi work name : profile
 		 */
 
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Profile.properties");
+		File file = new File(workingdr+"\\resources\\Profile.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -128,7 +128,7 @@ public class SubClass extends BaseClass {
 		 */
 		// driver.switchTo().defaultContent();
 		// driver.switchTo().frame("contentframe");
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Update.properties");
+		File file = new File(workingdr+"\\resources\\Update.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -306,7 +306,7 @@ public class SubClass extends BaseClass {
 		/**
 		 * @author Durga work name : myjob
 		 */
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Fetch.properties");
+		File file = new File(workingdr+"\\resources\\Fetch.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -402,7 +402,7 @@ public class SubClass extends BaseClass {
 	}
 
 	public void listing() throws Exception {
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Listing.properties");
+		File file = new File(workingdr+"\\resources\\Listing.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -448,7 +448,7 @@ public class SubClass extends BaseClass {
 	}
 
 	public void feature() throws InterruptedException, IOException {
-		File file = new File("E:\\workspace\\Final.automation\\src\\finalTest\\Feature.properties");
+		File file = new File(workingdr+"\\resources\\Feature.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
