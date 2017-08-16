@@ -1,5 +1,6 @@
 package keyword.Toolsqa;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -7,6 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ActionKeywords {
+		
+		//Reflection in Keyword driven Framework
+		/**
+		* @authors Venkadesh,Selvakumar work name : ActionPerformance
+		**/
 
 	public static WebDriver driver;
 
@@ -54,6 +60,11 @@ public class ActionKeywords {
 
 	public static void closeBrowser() {
 		driver.quit();
+	}
+
+	public Method[] getDeclaredMethods() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -26,7 +26,7 @@ public class DriverScript {
 	    		String sActionKeyword = ExcelUtils.getCellData(i, 3);
 	 
 	    		//Comparing the value of Excel cell with all the project keywords
-	    		if(sActionKeyword.equals("openbrowser")){
+	    		if(sActionKeyword.equals("openBrowser")){
 	                        //This will execute if the excel cell value is 'openBrowser'
 	    			//Action Keyword is called here to perform action
 	    			ActionKeywords.openBrowser();}
